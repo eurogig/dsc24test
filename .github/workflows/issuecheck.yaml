@@ -8,7 +8,7 @@ jobs:
     name: Check issue title
     steps:
     - run: |
-        title = "${{ github.event.issue.title }}"
+        title="${{ github.event.issue.title }}"
         if [[ ! $title=~.*.:\ .* ]]; then
           echo "Bad issue title"
           exit 1
